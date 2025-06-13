@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raquelzinhaaa, Meu Amor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21.35 0l-1.45-1.32C5.4 15.36 2 12.28 2 5.45 2 2.42 4.42 0 7.5 0c1.74 0 3.41 0.81 4.5 4.09C12 0 3.81 14.76 0 16.5 0 0 19.58 0 22 2.42 22 5.44 0 8.78-3.4 3.86 8.55 14.54L12 21.35z' fill='%23ff6f61'/%3E%3C/svg%3E" type="image/svg+xml">
+    <link rel="stylesheet" href="style/home.css">
+</head>
+<body>
+    <!-- Corações flutuantes -->
+    <div class="hearts">
+        <span class="heart" style="left: 10%; animation-delay: 0s;"></span>
+        <span class="heart" style="left: 25%; animation-delay: 1s;"></span>
+        <span class="heart" style="left: 40%; animation-delay: 2s;"></span>
+        <span class="heart" style="left: 55%; animation-delay: 3s;"></span>
+        <span class="heart" style="left: 70%; animation-delay: 4s;"></span>
+        <span class="heart" style="left: 85%; animation-delay: 5s;"></span>
+    </div>
+
+    <!-- Declaração de amor -->
+    <div class="declaration">
+        <h2>Raquel, Meu Amor</h2>
+        <p>Sou completamente apaixonado por você. Sua presença na minha vida me faz a pessoa mais feliz do mundo. O seu toque me acalma, como se todo o universo se aquietasse só para nós. O cuidado que você tem comigo faz com que eu me sinta a pessoa mais privilegiada de todas. Você é a minha melhor parte, e quando estou com você, sinto que somos um só. Mesmo quando estamos longe, estamos interligados pelo amor, como se nossos corações batessem no mesmo ritmo. Até o infinito fica pequeno quando se trata do que eu sinto por você. Não existe uma estrela ou sequer uma constelação que brilhe e que seja mais bonito que o seu sorriso. Ao estar com você, descobri que o amor não faz sentido, ele dá sentido, assim como você me completa. Você é a minha melhor escolha, minha melhor amiga, e acredito em você com todo o meu ser. Não sei como será o futuro, mas sei que você é a minha certeza. Te amo para sempre!</p>
+        <p class="signature">Com todo o meu amor, <strong>Diogo Da Silva Almeida</strong></p>
+        <img src="img/message_photo.jpg" alt="Nós dois juntos">
+
+        <!-- Botão interativo -->
+        <button class="love-button" onclick="showLoveMessage()">Raquelzinhaaa, te amo!</button>
+        <div class="love-message-backdrop" id="loveMessageBackdrop" onclick="hideLoveMessage()"></div>
+        <div class="love-message" id="loveMessage">
+            Você é meu tudo, Raquel. Que cada segundo ao seu lado seja inesquecível, que cada dia venha com mais leveza — e que a vida seja inteira ao seu lado. Não importa onde, desde que seja com você.
+            <button class="close-message" onclick="hideLoveMessage()">✖</button>
+        </div>
+    </div>
+
+    <script src="script/home.js"></script>
+</body>

@@ -1,0 +1,351 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #d3e8f7;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 100 100"><path d="M50 30c5-10 15-15 20-5 5 10-5 20-15 25-10-5-20-15-15-25 5-10 15-5 20 5z" fill="rgba(255,255,255,0.2)"/></svg>');
+    background-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    text-align: center;
+    color: #333;
+    position: relative;
+}
+.hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+.heart {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="rgba(255,255,255,0.6)"/></svg>');
+    background-size: cover;
+    animation: float 7s infinite ease-in-out;
+}
+@keyframes float {
+    0% { transform: translateY(100vh); opacity: 0.7; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+}
+.spotify-embeds-container {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    width: 100%;
+    max-width: 800px;
+    justify-content: center;
+}
+.spotify-embed {
+    flex: 1;
+    min-width: 280px;
+    max-width: 380px;
+    border-radius: 12px;
+    border: 1px solid #b0c4de;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+    background-color: #d3e8f7;
+}
+.spotify-embed iframe {
+    width: 100%;
+    height: 80px;
+    border-radius: 12px;
+}
+.carousel-container {
+    width: 100%;
+    max-width: 700px;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+.carousel {
+    display: flex;
+    animation: slide 20s infinite linear;
+    width: calc(200px * 10);
+}
+.carousel:hover {
+    animation-play-state: paused;
+}
+.polaroid {
+    background: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: 160px;
+    margin: 0.75rem 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.polaroid:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 0 8px rgba(176, 196, 222, 0.5);
+}
+.polaroid img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+}
+.polaroid-caption {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    color: #4682b4;
+    text-align: center;
+}
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-200px * 5)); }
+}
+.timeline {
+    max-width: 720px;
+    margin: 1rem 0;
+    padding: 0 1rem;
+}
+.timeline p {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.75rem;
+    color: #4169e1;
+    margin-bottom: 1rem;
+}
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    animation: fadeIn 1.2s ease-in-out;
+}
+.timeline-content {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #b0c4de;
+    flex: 1;
+}
+.timeline-content h4 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.1rem;
+    color: #4682b4;
+    margin-bottom: 0.25rem;
+}
+.timeline-content p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+#time-together {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.1rem;
+    color: #4169e1;
+}
+.declaration {
+    max-width: 650px;
+    margin: 1rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 12px;
+    border: 1px solid #b0c4de;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.2s ease-in-out;
+}
+.declaration h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    color: #4169e1;
+    margin-bottom: 0.75rem;
+}
+.declaration p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 0.75rem;
+}
+.declaration img {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 1rem auto 0;
+}
+.declaration .signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.25rem;
+    color: #ff6f61;
+    text-align: right;
+    margin-top: 1rem;
+}
+.love-button, .surprise-button {
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.25rem;
+    color: #fff;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1.2s ease-in-out;
+}
+.love-button:hover, .surprise-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 111, 97, 0.5);
+}
+.love-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    width: 90%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 12px;
+    border: 1px solid #b0c4de;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.25rem;
+    color: #4169e1;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: popIn 0.5s ease-out, pulse 2s infinite ease-in-out;
+}
+.love-message::before {
+    content: '♥';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: #ff6f61;
+    animation: sway 1.5s infinite ease-in-out;
+}
+.love-message-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.close-message {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.5rem;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: #4169e1;
+    cursor: pointer;
+}
+@keyframes popIn {
+    0% { transform: translate(-50%, -50%) scale(0.7); opacity: 0; }
+    80% { transform: translate(-50%, -50%) scale(1.05); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+@keyframes pulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.02); }
+}
+@keyframes sway {
+    0%, 100% { transform: translateX(-50%) rotate(-10deg); }
+    50% { transform: translateX(-50%) rotate(10deg); }
+}
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 768px) {
+    .spotify-embeds-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .spotify-embed {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    .polaroid {
+        width: 140px;
+    }
+    .polaroid img {
+        width: 120px;
+        height: 120px;
+    }
+    .carousel {
+        width: calc(180px * 10);
+    }
+    @keyframes slide {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-180px * 5)); }
+    }
+    .declaration, .timeline {
+        padding: 1rem;
+    }
+    .declaration h2, .timeline h3 {
+        font-size: 1.5rem;
+    }
+    .declaration p, .timeline p {
+        font-size: 0.85rem;
+    }
+    .declaration img {
+        max-height: 250px;
+    }
+    .love-button, .surprise-button {
+        font-size: 1.1rem;
+    }
+    .love-message {
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 400px) {
+    body {
+        padding: 0.5rem;
+    }
+    .polaroid {
+        width: 120px;
+    }
+    .polaroid img {
+        width: 100px;
+        height: 100px;
+    }
+    .carousel {
+        width: calc(160px * 10);
+    }
+    @keyframes slide {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-160px * 5)); }
+    }
+    .declaration, .timeline {
+        padding: 0.75rem;
+    }
+    .declaration h2, .timeline h3 {
+        font-size: 1.25rem;
+    }
+    .declaration p, .timeline p {
+        font-size: 0.8rem;
+    }
+    .declaration img {
+        max-height: 200px;
+    }
+    .love-button, .surprise-button {
+        font-size: 1rem;
+    }
+    .love-message {
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+}
